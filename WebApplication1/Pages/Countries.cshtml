@@ -1,0 +1,20 @@
+﻿@page
+@model WebApplication1.Pages.CountriesModel
+@{
+    ViewData["Title"] = "Countries";
+}
+<div class="text-center">
+    <h1 class="display-4">List of Countries</h1>
+    <ul class="country-list">
+        @foreach (var country in Model.Countries)
+        {
+            <li>
+                <h3>@country.Name</h3>
+                <p>Capital: @country.Capital</p>
+                <p>Country code: @country.CountryCode</p>
+                <p>Population: @country.Population</p>
+                <p>Area: @country.Area</p>
+            </li>
+        }
+    </ul>
+</div>

@@ -1,0 +1,20 @@
+﻿@page
+@model WebApplication1.Pages.RestaurantsListModel
+@{
+}
+<div class="text-center">
+    <h1 class="display-4">Random Letter</h1>
+    <p class="lead">The randomly selected letter is: @Model.RandomLetter</p>
+
+    <h2 class="mt-4">Restaurant List</h2>
+    <ul class="restaurant-list">
+        @foreach (var restaurant in Model.Restaurants)
+        {
+            <li>
+                <h3>@restaurant.Name</h3>
+                <p>Location: @restaurant.Location</p>
+                <p>Description: @restaurant.Description</p>
+            </li>
+        }
+    </ul>
+</div>
